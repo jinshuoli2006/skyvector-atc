@@ -1,0 +1,956 @@
+{
+  "version": 1,
+  "generatedBy": "tools/generate_scenarios.py",
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "晨间进近 · Level 1",
+      "difficulty": 1,
+      "airspace": {
+        "name": "珠江终端管制区",
+        "radiusNm": 42,
+        "minSeparationNm": 5.15,
+        "handoffToleranceDeg": 28,
+        "groundHoldLimitSec": 132,
+        "gates": [
+          {
+            "id": "NORTH",
+            "x": 0.0,
+            "y": 0.93,
+            "bearing": 0,
+            "label": "北门"
+          },
+          {
+            "id": "EAST",
+            "x": 0.93,
+            "y": 0.0,
+            "bearing": 90,
+            "label": "东门"
+          },
+          {
+            "id": "SOUTH",
+            "x": 0.0,
+            "y": -0.93,
+            "bearing": 180,
+            "label": "南门"
+          },
+          {
+            "id": "WEST",
+            "x": -0.93,
+            "y": 0.0,
+            "bearing": 270,
+            "label": "西门"
+          }
+        ],
+        "fixes": [
+          {
+            "id": "ALPHA",
+            "x": -0.48,
+            "y": 0.52,
+            "label": "ALPHA"
+          },
+          {
+            "id": "BRAVO",
+            "x": 0.42,
+            "y": 0.58,
+            "label": "BRAVO"
+          },
+          {
+            "id": "CANTO",
+            "x": 0.55,
+            "y": -0.35,
+            "label": "CANTO"
+          },
+          {
+            "id": "DELTA",
+            "x": -0.55,
+            "y": -0.42,
+            "label": "DELTA"
+          },
+          {
+            "id": "FINAL04",
+            "x": -0.28,
+            "y": -0.34,
+            "label": "F04"
+          },
+          {
+            "id": "FINAL22",
+            "x": 0.28,
+            "y": 0.34,
+            "label": "F22"
+          }
+        ],
+        "runways": [
+          {
+            "id": "RWY 04",
+            "heading": 40,
+            "x": 0.0,
+            "y": 0.0,
+            "length": 0.46
+          },
+          {
+            "id": "RWY 22",
+            "heading": 220,
+            "x": 0.0,
+            "y": 0.0,
+            "length": 0.46
+          }
+        ],
+        "weather": [
+          {
+            "id": "WX1",
+            "x": -0.152,
+            "y": -0.278,
+            "r": 0.103,
+            "severity": "heavy"
+          }
+        ]
+      },
+      "traffic": [
+        {
+          "id": "D10",
+          "callsign": "HKE419",
+          "kind": "departure",
+          "type": "C919",
+          "queueAt": 10,
+          "spawnAt": 10,
+          "status": "queued",
+          "targetExit": "WEST",
+          "runway": "RWY 22",
+          "heading": 220,
+          "altitude": 0,
+          "speed": 0,
+          "targetAltitude": 6000
+        },
+        {
+          "id": "A10",
+          "callsign": "DKH585",
+          "kind": "arrival",
+          "type": "A321",
+          "spawnAt": 16,
+          "spawnGate": "NORTH",
+          "x": 0.0,
+          "y": 0.93,
+          "heading": 180,
+          "altitude": 7000,
+          "speed": 260,
+          "targetRunway": "RWY 22",
+          "targetAltitude": 1800
+        },
+        {
+          "id": "D11",
+          "callsign": "CDG864",
+          "kind": "departure",
+          "type": "A359",
+          "queueAt": 51,
+          "spawnAt": 51,
+          "status": "queued",
+          "targetExit": "EAST",
+          "runway": "RWY 04",
+          "heading": 40,
+          "altitude": 0,
+          "speed": 0,
+          "targetAltitude": 6000
+        },
+        {
+          "id": "A11",
+          "callsign": "QTR893",
+          "kind": "arrival",
+          "type": "A320",
+          "spawnAt": 56,
+          "spawnGate": "SOUTH",
+          "x": 0.0,
+          "y": -0.93,
+          "heading": 0,
+          "altitude": 6000,
+          "speed": 260,
+          "targetRunway": "RWY 04",
+          "targetAltitude": 1800
+        },
+        {
+          "id": "A12",
+          "callsign": "UAE812",
+          "kind": "arrival",
+          "type": "C919",
+          "spawnAt": 117,
+          "spawnGate": "NORTH",
+          "x": 0.0,
+          "y": 0.93,
+          "heading": 180,
+          "altitude": 8000,
+          "speed": 250,
+          "targetRunway": "RWY 22",
+          "targetAltitude": 1800
+        }
+      ]
+    },
+    {
+      "id": "scenario-2",
+      "name": "海湾离场 · Level 2",
+      "difficulty": 2,
+      "airspace": {
+        "name": "珠江终端管制区",
+        "radiusNm": 42,
+        "minSeparationNm": 4.8,
+        "handoffToleranceDeg": 28,
+        "groundHoldLimitSec": 124,
+        "gates": [
+          {
+            "id": "NORTH",
+            "x": 0.0,
+            "y": 0.93,
+            "bearing": 0,
+            "label": "北门"
+          },
+          {
+            "id": "EAST",
+            "x": 0.93,
+            "y": 0.0,
+            "bearing": 90,
+            "label": "东门"
+          },
+          {
+            "id": "SOUTH",
+            "x": 0.0,
+            "y": -0.93,
+            "bearing": 180,
+            "label": "南门"
+          },
+          {
+            "id": "WEST",
+            "x": -0.93,
+            "y": 0.0,
+            "bearing": 270,
+            "label": "西门"
+          }
+        ],
+        "fixes": [
+          {
+            "id": "ALPHA",
+            "x": -0.48,
+            "y": 0.52,
+            "label": "ALPHA"
+          },
+          {
+            "id": "BRAVO",
+            "x": 0.42,
+            "y": 0.58,
+            "label": "BRAVO"
+          },
+          {
+            "id": "CANTO",
+            "x": 0.55,
+            "y": -0.35,
+            "label": "CANTO"
+          },
+          {
+            "id": "DELTA",
+            "x": -0.55,
+            "y": -0.42,
+            "label": "DELTA"
+          },
+          {
+            "id": "FINAL04",
+            "x": -0.28,
+            "y": -0.34,
+            "label": "F04"
+          },
+          {
+            "id": "FINAL22",
+            "x": 0.28,
+            "y": 0.34,
+            "label": "F22"
+          }
+        ],
+        "runways": [
+          {
+            "id": "RWY 04",
+            "heading": 40,
+            "x": 0.0,
+            "y": 0.0,
+            "length": 0.46
+          },
+          {
+            "id": "RWY 22",
+            "heading": 220,
+            "x": 0.0,
+            "y": 0.0,
+            "length": 0.46
+          }
+        ],
+        "weather": [
+          {
+            "id": "WX1",
+            "x": -0.663,
+            "y": 0.262,
+            "r": 0.144,
+            "severity": "heavy"
+          },
+          {
+            "id": "WX2",
+            "x": -0.06,
+            "y": 0.431,
+            "r": 0.154,
+            "severity": "heavy"
+          }
+        ]
+      },
+      "traffic": [
+        {
+          "id": "D20",
+          "callsign": "UAE524",
+          "kind": "departure",
+          "type": "A320",
+          "queueAt": 0,
+          "spawnAt": 0,
+          "status": "queued",
+          "targetExit": "NORTH",
+          "runway": "RWY 04",
+          "heading": 40,
+          "altitude": 0,
+          "speed": 0,
+          "targetAltitude": 7000
+        },
+        {
+          "id": "A20",
+          "callsign": "QTR664",
+          "kind": "arrival",
+          "type": "C919",
+          "spawnAt": 19,
+          "spawnGate": "SOUTH",
+          "x": 0.0,
+          "y": -0.93,
+          "heading": 0,
+          "altitude": 7000,
+          "speed": 250,
+          "targetRunway": "RWY 22",
+          "targetAltitude": 1800
+        },
+        {
+          "id": "D21",
+          "callsign": "SIA787",
+          "kind": "departure",
+          "type": "A359",
+          "queueAt": 43,
+          "spawnAt": 43,
+          "status": "queued",
+          "targetExit": "EAST",
+          "runway": "RWY 22",
+          "heading": 220,
+          "altitude": 0,
+          "speed": 0,
+          "targetAltitude": 6000
+        },
+        {
+          "id": "A21",
+          "callsign": "QTR161",
+          "kind": "arrival",
+          "type": "A321",
+          "spawnAt": 69,
+          "spawnGate": "SOUTH",
+          "x": 0.0,
+          "y": -0.93,
+          "heading": 0,
+          "altitude": 7000,
+          "speed": 260,
+          "targetRunway": "RWY 22",
+          "targetAltitude": 1800
+        },
+        {
+          "id": "D22",
+          "callsign": "DKH675",
+          "kind": "departure",
+          "type": "A320",
+          "queueAt": 78,
+          "spawnAt": 78,
+          "status": "queued",
+          "targetExit": "WEST",
+          "runway": "RWY 22",
+          "heading": 220,
+          "altitude": 0,
+          "speed": 0,
+          "targetAltitude": 5000
+        },
+        {
+          "id": "A22",
+          "callsign": "DKH690",
+          "kind": "arrival",
+          "type": "A321",
+          "spawnAt": 100,
+          "spawnGate": "SOUTH",
+          "x": 0.0,
+          "y": -0.93,
+          "heading": 0,
+          "altitude": 8000,
+          "speed": 260,
+          "targetRunway": "RWY 22",
+          "targetAltitude": 1800
+        },
+        {
+          "id": "A23",
+          "callsign": "APG989",
+          "kind": "arrival",
+          "type": "B789",
+          "spawnAt": 172,
+          "spawnGate": "SOUTH",
+          "x": 0.0,
+          "y": -0.93,
+          "heading": 0,
+          "altitude": 9000,
+          "speed": 260,
+          "targetRunway": "RWY 04",
+          "targetAltitude": 1800
+        }
+      ]
+    },
+    {
+      "id": "scenario-3",
+      "name": "雷雨绕飞 · Level 3",
+      "difficulty": 3,
+      "airspace": {
+        "name": "珠江终端管制区",
+        "radiusNm": 42,
+        "minSeparationNm": 4.45,
+        "handoffToleranceDeg": 28,
+        "groundHoldLimitSec": 116,
+        "gates": [
+          {
+            "id": "NORTH",
+            "x": 0.0,
+            "y": 0.93,
+            "bearing": 0,
+            "label": "北门"
+          },
+          {
+            "id": "EAST",
+            "x": 0.93,
+            "y": 0.0,
+            "bearing": 90,
+            "label": "东门"
+          },
+          {
+            "id": "SOUTH",
+            "x": 0.0,
+            "y": -0.93,
+            "bearing": 180,
+            "label": "南门"
+          },
+          {
+            "id": "WEST",
+            "x": -0.93,
+            "y": 0.0,
+            "bearing": 270,
+            "label": "西门"
+          }
+        ],
+        "fixes": [
+          {
+            "id": "ALPHA",
+            "x": -0.48,
+            "y": 0.52,
+            "label": "ALPHA"
+          },
+          {
+            "id": "BRAVO",
+            "x": 0.42,
+            "y": 0.58,
+            "label": "BRAVO"
+          },
+          {
+            "id": "CANTO",
+            "x": 0.55,
+            "y": -0.35,
+            "label": "CANTO"
+          },
+          {
+            "id": "DELTA",
+            "x": -0.55,
+            "y": -0.42,
+            "label": "DELTA"
+          },
+          {
+            "id": "FINAL04",
+            "x": -0.28,
+            "y": -0.34,
+            "label": "F04"
+          },
+          {
+            "id": "FINAL22",
+            "x": 0.28,
+            "y": 0.34,
+            "label": "F22"
+          }
+        ],
+        "runways": [
+          {
+            "id": "RWY 04",
+            "heading": 40,
+            "x": 0.0,
+            "y": 0.0,
+            "length": 0.46
+          },
+          {
+            "id": "RWY 22",
+            "heading": 220,
+            "x": 0.0,
+            "y": 0.0,
+            "length": 0.46
+          }
+        ],
+        "weather": [
+          {
+            "id": "WX1",
+            "x": -0.418,
+            "y": -0.095,
+            "r": 0.095,
+            "severity": "light"
+          },
+          {
+            "id": "WX2",
+            "x": -0.101,
+            "y": 0.343,
+            "r": 0.115,
+            "severity": "heavy"
+          },
+          {
+            "id": "WX3",
+            "x": 0.392,
+            "y": -0.188,
+            "r": 0.088,
+            "severity": "light"
+          }
+        ]
+      },
+      "traffic": [
+        {
+          "id": "D30",
+          "callsign": "JYH184",
+          "kind": "departure",
+          "type": "B738",
+          "queueAt": 7,
+          "spawnAt": 7,
+          "status": "queued",
+          "targetExit": "EAST",
+          "runway": "RWY 04",
+          "heading": 40,
+          "altitude": 0,
+          "speed": 0,
+          "targetAltitude": 5000
+        },
+        {
+          "id": "A30",
+          "callsign": "JYH695",
+          "kind": "arrival",
+          "type": "A321",
+          "spawnAt": 15,
+          "spawnGate": "NORTH",
+          "x": 0.0,
+          "y": 0.93,
+          "heading": 180,
+          "altitude": 7000,
+          "speed": 260,
+          "targetRunway": "RWY 04",
+          "targetAltitude": 1800
+        },
+        {
+          "id": "D31",
+          "callsign": "QTR828",
+          "kind": "departure",
+          "type": "B738",
+          "queueAt": 36,
+          "spawnAt": 36,
+          "status": "queued",
+          "targetExit": "WEST",
+          "runway": "RWY 22",
+          "heading": 220,
+          "altitude": 0,
+          "speed": 0,
+          "targetAltitude": 7000
+        },
+        {
+          "id": "A31",
+          "callsign": "CPA288",
+          "kind": "arrival",
+          "type": "B738",
+          "spawnAt": 67,
+          "spawnGate": "WEST",
+          "x": -0.93,
+          "y": 0.0,
+          "heading": 90,
+          "altitude": 9000,
+          "speed": 260,
+          "targetRunway": "RWY 22",
+          "targetAltitude": 1800
+        },
+        {
+          "id": "D32",
+          "callsign": "JYH879",
+          "kind": "departure",
+          "type": "B39M",
+          "queueAt": 90,
+          "spawnAt": 90,
+          "status": "queued",
+          "targetExit": "EAST",
+          "runway": "RWY 04",
+          "heading": 40,
+          "altitude": 0,
+          "speed": 0,
+          "targetAltitude": 5000
+        },
+        {
+          "id": "D33",
+          "callsign": "QTR744",
+          "kind": "departure",
+          "type": "E190",
+          "queueAt": 98,
+          "spawnAt": 98,
+          "status": "queued",
+          "targetExit": "EAST",
+          "runway": "RWY 22",
+          "heading": 220,
+          "altitude": 0,
+          "speed": 0,
+          "targetAltitude": 6000
+        },
+        {
+          "id": "A33",
+          "callsign": "CPA847",
+          "kind": "arrival",
+          "type": "E190",
+          "spawnAt": 131,
+          "spawnGate": "EAST",
+          "x": 0.93,
+          "y": 0.0,
+          "heading": 270,
+          "altitude": 8000,
+          "speed": 240,
+          "targetRunway": "RWY 22",
+          "targetAltitude": 1800
+        },
+        {
+          "id": "A32",
+          "callsign": "CCA959",
+          "kind": "arrival",
+          "type": "B789",
+          "spawnAt": 132,
+          "spawnGate": "SOUTH",
+          "x": 0.0,
+          "y": -0.93,
+          "heading": 0,
+          "altitude": 6000,
+          "speed": 250,
+          "targetRunway": "RWY 04",
+          "targetAltitude": 1800
+        },
+        {
+          "id": "A34",
+          "callsign": "DKH403",
+          "kind": "arrival",
+          "type": "A321",
+          "spawnAt": 193,
+          "spawnGate": "NORTH",
+          "x": 0.0,
+          "y": 0.93,
+          "heading": 180,
+          "altitude": 7000,
+          "speed": 220,
+          "targetRunway": "RWY 04",
+          "targetAltitude": 1800
+        }
+      ]
+    },
+    {
+      "id": "scenario-4",
+      "name": "夜航高峰 · Level 4",
+      "difficulty": 4,
+      "airspace": {
+        "name": "珠江终端管制区",
+        "radiusNm": 42,
+        "minSeparationNm": 4.2,
+        "handoffToleranceDeg": 28,
+        "groundHoldLimitSec": 108,
+        "gates": [
+          {
+            "id": "NORTH",
+            "x": 0.0,
+            "y": 0.93,
+            "bearing": 0,
+            "label": "北门"
+          },
+          {
+            "id": "EAST",
+            "x": 0.93,
+            "y": 0.0,
+            "bearing": 90,
+            "label": "东门"
+          },
+          {
+            "id": "SOUTH",
+            "x": 0.0,
+            "y": -0.93,
+            "bearing": 180,
+            "label": "南门"
+          },
+          {
+            "id": "WEST",
+            "x": -0.93,
+            "y": 0.0,
+            "bearing": 270,
+            "label": "西门"
+          }
+        ],
+        "fixes": [
+          {
+            "id": "ALPHA",
+            "x": -0.48,
+            "y": 0.52,
+            "label": "ALPHA"
+          },
+          {
+            "id": "BRAVO",
+            "x": 0.42,
+            "y": 0.58,
+            "label": "BRAVO"
+          },
+          {
+            "id": "CANTO",
+            "x": 0.55,
+            "y": -0.35,
+            "label": "CANTO"
+          },
+          {
+            "id": "DELTA",
+            "x": -0.55,
+            "y": -0.42,
+            "label": "DELTA"
+          },
+          {
+            "id": "FINAL04",
+            "x": -0.28,
+            "y": -0.34,
+            "label": "F04"
+          },
+          {
+            "id": "FINAL22",
+            "x": 0.28,
+            "y": 0.34,
+            "label": "F22"
+          }
+        ],
+        "runways": [
+          {
+            "id": "RWY 04",
+            "heading": 40,
+            "x": 0.0,
+            "y": 0.0,
+            "length": 0.46
+          },
+          {
+            "id": "RWY 22",
+            "heading": 220,
+            "x": 0.0,
+            "y": 0.0,
+            "length": 0.46
+          }
+        ],
+        "weather": [
+          {
+            "id": "WX1",
+            "x": 0.369,
+            "y": 0.217,
+            "r": 0.095,
+            "severity": "heavy"
+          },
+          {
+            "id": "WX2",
+            "x": -0.466,
+            "y": 0.406,
+            "r": 0.104,
+            "severity": "moderate"
+          },
+          {
+            "id": "WX3",
+            "x": 0.019,
+            "y": 0.656,
+            "r": 0.122,
+            "severity": "moderate"
+          },
+          {
+            "id": "WX4",
+            "x": -0.244,
+            "y": 0.006,
+            "r": 0.106,
+            "severity": "heavy"
+          }
+        ]
+      },
+      "traffic": [
+        {
+          "id": "D40",
+          "callsign": "HKE432",
+          "kind": "departure",
+          "type": "A359",
+          "queueAt": 4,
+          "spawnAt": 4,
+          "status": "queued",
+          "targetExit": "SOUTH",
+          "runway": "RWY 04",
+          "heading": 40,
+          "altitude": 0,
+          "speed": 0,
+          "targetAltitude": 7000
+        },
+        {
+          "id": "A40",
+          "callsign": "CCA116",
+          "kind": "arrival",
+          "type": "A321",
+          "spawnAt": 20,
+          "spawnGate": "SOUTH",
+          "x": 0.0,
+          "y": -0.93,
+          "heading": 0,
+          "altitude": 7000,
+          "speed": 250,
+          "targetRunway": "RWY 04",
+          "targetAltitude": 1800
+        },
+        {
+          "id": "D41",
+          "callsign": "HKE539",
+          "kind": "departure",
+          "type": "A320",
+          "queueAt": 51,
+          "spawnAt": 51,
+          "status": "queued",
+          "targetExit": "NORTH",
+          "runway": "RWY 04",
+          "heading": 40,
+          "altitude": 0,
+          "speed": 0,
+          "targetAltitude": 6000
+        },
+        {
+          "id": "A41",
+          "callsign": "CPA929",
+          "kind": "arrival",
+          "type": "B39M",
+          "spawnAt": 59,
+          "spawnGate": "NORTH",
+          "x": 0.0,
+          "y": 0.93,
+          "heading": 180,
+          "altitude": 9000,
+          "speed": 220,
+          "targetRunway": "RWY 04",
+          "targetAltitude": 1800
+        },
+        {
+          "id": "D42",
+          "callsign": "CPA650",
+          "kind": "departure",
+          "type": "A321",
+          "queueAt": 68,
+          "spawnAt": 68,
+          "status": "queued",
+          "targetExit": "WEST",
+          "runway": "RWY 22",
+          "heading": 220,
+          "altitude": 0,
+          "speed": 0,
+          "targetAltitude": 5000
+        },
+        {
+          "id": "A42",
+          "callsign": "JYH775",
+          "kind": "arrival",
+          "type": "B738",
+          "spawnAt": 96,
+          "spawnGate": "EAST",
+          "x": 0.93,
+          "y": 0.0,
+          "heading": 270,
+          "altitude": 7000,
+          "speed": 260,
+          "targetRunway": "RWY 22",
+          "targetAltitude": 1800
+        },
+        {
+          "id": "D43",
+          "callsign": "QTR685",
+          "kind": "departure",
+          "type": "A321",
+          "queueAt": 124,
+          "spawnAt": 124,
+          "status": "queued",
+          "targetExit": "NORTH",
+          "runway": "RWY 22",
+          "heading": 220,
+          "altitude": 0,
+          "speed": 0,
+          "targetAltitude": 7000
+        },
+        {
+          "id": "A43",
+          "callsign": "CES522",
+          "kind": "arrival",
+          "type": "B738",
+          "spawnAt": 146,
+          "spawnGate": "SOUTH",
+          "x": 0.0,
+          "y": -0.93,
+          "heading": 0,
+          "altitude": 6000,
+          "speed": 220,
+          "targetRunway": "RWY 04",
+          "targetAltitude": 1800
+        },
+        {
+          "id": "D44",
+          "callsign": "CSN317",
+          "kind": "departure",
+          "type": "B738",
+          "queueAt": 148,
+          "spawnAt": 148,
+          "status": "queued",
+          "targetExit": "WEST",
+          "runway": "RWY 04",
+          "heading": 40,
+          "altitude": 0,
+          "speed": 0,
+          "targetAltitude": 5000
+        },
+        {
+          "id": "A44",
+          "callsign": "CES791",
+          "kind": "arrival",
+          "type": "B738",
+          "spawnAt": 180,
+          "spawnGate": "WEST",
+          "x": -0.93,
+          "y": 0.0,
+          "heading": 90,
+          "altitude": 9000,
+          "speed": 260,
+          "targetRunway": "RWY 22",
+          "targetAltitude": 1800
+        },
+        {
+          "id": "A45",
+          "callsign": "CDG304",
+          "kind": "arrival",
+          "type": "B738",
+          "spawnAt": 254,
+          "spawnGate": "EAST",
+          "x": 0.93,
+          "y": 0.0,
+          "heading": 270,
+          "altitude": 7000,
+          "speed": 260,
+          "targetRunway": "RWY 04",
+          "targetAltitude": 1800
+        }
+      ]
+    }
+  ]
+}

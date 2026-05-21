@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="SkyVector ATC - a browser based air traffic control simulator." />
+  <title>SkyVector ATC · 空管雷达模拟器</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="hero panel glass">
+      <div>
+        <p class="eyebrow">SkyVector ATC</p>
+        <h1>空中交通管制雷达模拟器</h1>
+        <p class="subtle">指挥进近、放行离场、维持间隔。进近飞机获落地许可后会自动截获五边并完成稳定落地。</p>
+      </div>
+      <div class="hero-actions">
+        <button id="startBtn" class="primary">开始</button>
+        <button id="pauseBtn" class="ghost">暂停</button>
+        <button id="resetBtn" class="ghost">重开</button>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="radar-card panel glass">
+        <div class="radar-toolbar">
+          <div class="metric"><span>得分</span><strong id="score">0</strong></div>
+          <div class="metric"><span>安全</span><strong id="safety">100%</strong></div>
+          <div class="metric"><span>时间</span><strong id="clock">00:00</strong></div>
+          <label class="select-label">场景
+            <select id="scenarioSelect"></select>
+          </label>
+          <label class="select-label">流量
+            <select id="trafficSelect">
+              <option value="training" selected>训练 40%</option>
+              <option value="easy">轻松 60%</option>
+              <option value="normal">标准 80%</option>
+              <option value="full">完整 100%</option>
+            </select>
+          </label>
+          <label class="select-label">速度
+            <select id="speedSelect">
+              <option value="0.5">0.5×</option>
+              <option value="1" selected>1×</option>
+              <option value="2">2×</option>
+              <option value="4">4×</option>
+            </select>
+          </label>
+        </div>
+        <div class="canvas-wrap">
+          <canvas id="radar" width="1200" height="900" aria-label="ATC radar canvas"></canvas>
+          <div id="toast" class="toast" role="status" aria-live="polite"></div>
+        </div>
+        <div class="legend">
+          <span><i class="dot arrival"></i>进近</span>
+          <span><i class="dot departure"></i>离场</span>
+          <span><i class="dot warning"></i>冲突告警</span>
+          <span><i class="gate-icon"></i>交接门</span>
+        </div>
+      </section>
+
+      <aside class="sidebar">
+        <section class="panel glass section-card">
+          <div class="section-title">
+            <div>
+              <p class="eyebrow">Aircraft</p>
+              <h2>选中航班</h2>
+            </div>
+            <span id="selectedBadge" class="badge">未选择</span>
+          </div>
+          <div id="selectedDetails" class="details empty">在雷达上点击飞机，或从离场队列中放行一架飞机。</div>
+          <div class="command-grid">
+            <button data-turn="-30">左转 30°</button>
+            <button data-turn="-10">左转 10°</button>
+            <button data-turn="10">右转 10°</button>
+            <button data-turn="30">右转 30°</button>
+            <button data-alt="1000">爬升 +1000</button>
+            <button data-alt="-1000">下降 -1000</button>
+            <button data-speed="20">加速 +20</button>
+            <button data-speed="-20">减速 -20</button>
+          </div>
+          <div class="direct-row">
+            <select id="directSelect"></select>
+            <button id="directBtn" class="ghost">直飞</button>
+          </div>
+          <div class="direct-row">
+            <button id="landBtn" class="success">准许落地 / 自动进近</button>
+            <button id="handoffBtn" class="success">雷达移交</button>
+          </div>
+        </section>
+
+        <section class="panel glass section-card">
+          <div class="section-title">
+            <div>
+              <p class="eyebrow">Ground</p>
+              <h2>离场队列</h2>
+            </div>
+            <button id="takeoffBtn" class="primary small">放行起飞</button>
+          </div>
+          <div id="queueList" class="queue-list"></div>
+        </section>
+
+        <section class="panel glass section-card">
+          <div class="section-title">
+            <div>
+              <p class="eyebrow">Radio</p>
+              <h2>通信记录</h2>
+            </div>
+            <button id="clearLogBtn" class="ghost small">清空</button>
+          </div>
+          <div id="log" class="log"></div>
+        </section>
+      </aside>
+    </main>
+  </div>
+
+  <script type="module" src="js/game.js"></script>
+</body>
+</html>
